@@ -10,6 +10,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>com-dummy-framework-core</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>com-dummy-framework-core-service</module>
+        <module>com-dummy-framework-core-controller</module>
+        <module>com-dummy-framework-core-data</module>
+        <module>com-dummy-framework-core-rpc</module>
+    </modules>
 
     <dependencies>
 
