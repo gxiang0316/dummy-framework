@@ -1,4 +1,4 @@
-package com.dummy.framework.core.data.db.base;
+package com.dummy.framework.core.data.db.mapper;
 
 import com.dummy.framework.core.data.db.entity.DbEntity;
 import tk.mybatis.mapper.common.Mapper;

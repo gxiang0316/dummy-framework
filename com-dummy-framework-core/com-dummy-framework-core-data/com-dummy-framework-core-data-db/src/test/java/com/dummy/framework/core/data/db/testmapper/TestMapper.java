@@ -1,6 +1,6 @@
 package com.dummy.framework.core.data.db.testmapper;
 
-import com.dummy.framework.core.data.db.base.BaseMapper;
+import com.dummy.framework.core.data.db.mapper.BaseMapper;
 import com.dummy.framework.core.data.db.entity.TestEntity;
 
 /**
