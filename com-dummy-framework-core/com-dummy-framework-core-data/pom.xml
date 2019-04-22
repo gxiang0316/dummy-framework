@@ -14,8 +14,7 @@
     <modules>
         <module>com-dummy-framework-core-data-redis</module>
         <module>com-dummy-framework-core-data-mongo</module>
-        <module>com-dummy-framework-core-data-db</module>
-        <module>com-dummy-framework-core-data-rabbit</module>
+        <module>com-dummy-framework-core-data-mybatis</module>
         <module>com-dummy-framework-core-data-common</module>
     </modules>
 
@@ -40,6 +39,13 @@
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>xyz.downgoon</groupId>
+            <artifactId>snowflake</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
     </dependencies>
 
 

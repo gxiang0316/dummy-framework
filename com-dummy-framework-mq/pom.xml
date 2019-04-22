@@ -3,18 +3,18 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>com-dummy-framework-core</artifactId>
+        <artifactId>com-dummy-framework</artifactId>
         <groupId>com.dummy.framework</groupId>
         <version>0.0.1.RELEASE</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>com-dummy-framework-core-rpc</artifactId>
+    <artifactId>com-dummy-framework-mq</artifactId>
     <packaging>pom</packaging>
-
     <modules>
-        <module>com-dummy-framework-core-rpc-feign</module>
-        <module>com-dummy-framework-core-rpc-dubbo</module>
+        <module>com-dummy-framework-mq-rabbit</module>
+        <module>com-dummy-framework-mq-kafka</module>
     </modules>
+
 
 </project>

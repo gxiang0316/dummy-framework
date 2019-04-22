@@ -10,6 +10,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>com-dummy-framework-core-rpc-feign</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>com-dummy-framework-core-rpc-dubbo</module>
+    </modules>
 
     <dependencies>
 

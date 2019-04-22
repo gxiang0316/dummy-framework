@@ -23,6 +23,8 @@
         <module>com-dummy-framework-utils</module>
         <module>com-dummy-framework-third</module>
         <module>com-dummy-framework-log</module>
+        <module>com-dummy-framework-mq</module>
+        <module>com-dummy-framework-zuul</module>
     </modules>
 
     <properties>

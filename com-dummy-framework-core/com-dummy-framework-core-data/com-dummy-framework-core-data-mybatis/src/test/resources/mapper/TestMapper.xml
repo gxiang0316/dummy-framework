@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dummy.framework.core.data.mybatis.testmapper.TestMapper">
+    <resultMap id="testEntity" type="com.dummy.framework.core.data.mybatis.entity.TestEntity">
+        <id column="id" property="id"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+    </resultMap>
+
+    <select id="selectById" resultMap="testEntity">
+      SELECT
+        t.id,
+        t.password,
+        t.username
+      FROM T_USER t
+      WHERE t.id = #{id}
+    </select>
+</mapper>
