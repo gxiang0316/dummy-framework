@@ -11,4 +11,14 @@
 
     <artifactId>com-dummy-framework-utils</artifactId>
 
+    <dependencies>
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>26.0-jre</version>
+        </dependency>
+
+    </dependencies>
+
 </project>

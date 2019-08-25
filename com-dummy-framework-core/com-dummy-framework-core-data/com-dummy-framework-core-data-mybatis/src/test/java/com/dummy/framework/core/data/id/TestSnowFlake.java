@@ -8,6 +8,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
+ * 雪花算法包junit测试
+ *
  * @author Vincent Kang
  * @date 19-4-21
  **/

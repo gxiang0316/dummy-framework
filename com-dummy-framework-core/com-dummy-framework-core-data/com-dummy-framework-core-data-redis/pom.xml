@@ -19,11 +19,6 @@
 
         <dependency>
             <groupId>com.dummy.framework</groupId>
-            <artifactId>com-dummy-framework-common</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.dummy.framework</groupId>
             <artifactId>com-dummy-framework-core-data-common</artifactId>
         </dependency>
 

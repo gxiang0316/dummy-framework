@@ -20,12 +20,26 @@
 
         <dependency>
             <groupId>com.dummy.framework</groupId>
-            <artifactId>com-dummy-framework-common</artifactId>
+            <artifactId>com-dummy-framework-core-data-common</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>com.dummy.framework</groupId>
-            <artifactId>com-dummy-framework-core-data-common</artifactId>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-annotations</artifactId>
+            <scope>compile</scope>
+        </dependency>
+
+        <!--Mybatis-->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
+            <version>${pagehelper-spring-boot-starter.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>tk.mybatis</groupId>
+            <artifactId>mapper-spring-boot-starter</artifactId>
+            <version>${mapper-spring-boot-starter.version}</version>
         </dependency>
 
         <dependency>
@@ -38,18 +52,7 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>tk.mybatis</groupId>
-            <artifactId>mapper-spring-boot-starter</artifactId>
-            <version>${mapper-spring-boot-starter.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.github.pagehelper</groupId>
-            <artifactId>pagehelper-spring-boot-starter</artifactId>
-            <version>${pagehelper-spring-boot-starter.version}</version>
+            <optional>true</optional>
         </dependency>
 
     </dependencies>
