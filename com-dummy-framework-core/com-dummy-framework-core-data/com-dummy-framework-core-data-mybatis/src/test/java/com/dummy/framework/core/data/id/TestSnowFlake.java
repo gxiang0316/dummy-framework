@@ -1,6 +1,7 @@
 package com.dummy.framework.core.data.id;
 
 import org.junit.Test;
+import org.springframework.boot.test.context.runner.ApplicationContextRunner;
 import xyz.downgoon.snowflake.Snowflake;
 
 import java.util.concurrent.CountDownLatch;

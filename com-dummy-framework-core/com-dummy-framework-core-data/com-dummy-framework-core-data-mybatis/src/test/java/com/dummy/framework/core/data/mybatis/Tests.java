@@ -37,7 +37,7 @@ public class Tests {
     public void testInsert() {
         TestEntity testEntity = new TestEntity();
         testEntity.setUsername("kanghouchao");
-        testEntity.setPassword(MD5Utils.getMD5("wf6032483@"));
+        testEntity.setPassword(MD5Utils.encode("wf6032483@"));
         testMapper.insertSelective(testEntity);
     }
 

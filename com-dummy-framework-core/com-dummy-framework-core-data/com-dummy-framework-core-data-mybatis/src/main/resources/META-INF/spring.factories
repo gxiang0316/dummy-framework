@@ -1,4 +1,3 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
   com.dummy.framework.core.data.mybatis.id.snowflake.SnowflakeIDGenerator, \
   com.dummy.framework.core.data.mybatis.id.uuid.UUIDGenerator
-

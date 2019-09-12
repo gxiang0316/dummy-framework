@@ -1,79 +1,46 @@
 package com.dummy.framework.utils;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import lombok.experimental.UtilityClass;
+
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
+@UtilityClass
 public class MD5Utils {
 
-    private static final String ENCODING_ALGORITHM = "MD5";
+    private MD5Utils() {
+        throw new IllegalStateException("Utility class");
+    }
 
-    private static byte[] md5sum(byte[] data) {
+    /**
+     * md5 加密
+     *
+     * @param plainText
+     * @return
+     * @time 2014年7月10日 下午3:30:01
+     */
+    public static String encode(String plainText) {
+        String re_md5 = "";
         try {
-            MessageDigest mdTemp = MessageDigest.getInstance(ENCODING_ALGORITHM);
-            mdTemp.update(data);
-            return mdTemp.digest();
+            MessageDigest md = MessageDigest.getInstance("MD5");
+            md.update(plainText.getBytes());
+            byte b[] = md.digest();
+            int i;
+            StringBuffer buf = new StringBuffer("");
+            for (int offset = 0; offset < b.length; offset++) {
+                i = b[offset];
+                if (i < 0)
+                    i += 256;
+                if (i < 16)
+                    buf.append("0");
+                buf.append(Integer.toHexString(i));
+            }
+
+            re_md5 = buf.toString();
+
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
-            return null;
         }
-    }
-
-    /* 将data数组转换为16进制字符串 */
-    private static String convertToHexString(byte data[]) {
-        StringBuffer strBuffer = new StringBuffer();
-        for (int i = 0; i < data.length; i++) {
-            strBuffer.append(Integer.toHexString(0xff & data[i]));
-        }
-        return strBuffer.toString();
-    }
-
-    private static byte[] md5sum(File file) {
-        final byte[] buffer = new byte[1024];
-        MessageDigest md5 = null;
-        InputStream fis = null;
-        try {
-            md5 = MessageDigest.getInstance(ENCODING_ALGORITHM);
-            int numRead = 0;
-            fis = new FileInputStream(file);
-            while ((numRead = fis.read(buffer)) > 0) {
-                md5.update(buffer, 0, numRead);
-            }
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            if (fis != null) {
-                try {
-                    fis.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-        return md5.digest();
-    }
-
-    /**
-     * 获取字符串的MD5值
-     */
-    public static String getMD5(String str) {
-        if (str != null && str.length() > 0)
-            return new String(convertToHexString(md5sum(str.getBytes())));
-        else
-            return null;
-    }
-
-    /**
-     * 获取文件的MD5值
-     */
-    public static String getMD5(File file) {
-        if (file != null && file.exists())
-            return new String(convertToHexString(md5sum(file)));
-        else
-            return null;
+        return re_md5;
     }
 }
