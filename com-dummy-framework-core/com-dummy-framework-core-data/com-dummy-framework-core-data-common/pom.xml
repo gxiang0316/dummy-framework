@@ -13,11 +13,6 @@
 
     <dependencies>
 
-        <dependency>
-            <groupId>com.dummy.framework</groupId>
-            <artifactId>com-dummy-framework-utils</artifactId>
-        </dependency>
-
     </dependencies>
 
 </project>

@@ -12,10 +12,17 @@
     <artifactId>com-dummy-framework-common</artifactId>
 
     <dependencies>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-autoconfigure</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.dummy.framework</groupId>
+            <artifactId>com-dummy-framework-utils</artifactId>
+        </dependency>
+
     </dependencies>
 
 </project>
