@@ -11,6 +11,13 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * @author Lurker
+ * <p>
+ * 日期： 2019/10/02
+ * 联系方式: hchkang8710@gmail.com
+ * <p/>
+ */
 @UtilityClass
 public class ValidateUtils {
 

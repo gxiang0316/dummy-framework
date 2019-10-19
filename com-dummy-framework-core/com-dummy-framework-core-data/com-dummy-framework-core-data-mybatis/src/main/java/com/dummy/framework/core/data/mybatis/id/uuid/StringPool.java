@@ -17,9 +17,11 @@
 package com.dummy.framework.core.data.mybatis.id.uuid;
 
 /**
- * 静态 String 池
- *
- * @author Hydosky
+ * @author Lurker
+ * <p>
+ * 日期： 2019/03/31
+ * 联系方式: hchkang8710@gmail.com
+ * <p/>
  */
 public interface StringPool {
 

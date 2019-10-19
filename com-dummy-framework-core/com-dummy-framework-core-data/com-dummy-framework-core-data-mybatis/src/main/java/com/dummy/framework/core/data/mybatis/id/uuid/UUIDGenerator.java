@@ -12,6 +12,13 @@ import org.springframework.context.annotation.Configuration;
 import java.util.UUID;
 import java.util.concurrent.ThreadLocalRandom;
 
+/**
+ * @author Lurker
+ * <p>
+ * 日期： 2019/03/31
+ * 联系方式: hchkang8710@gmail.com
+ * <p/>
+ */
 @Slf4j
 @Configuration
 @NoArgsConstructor

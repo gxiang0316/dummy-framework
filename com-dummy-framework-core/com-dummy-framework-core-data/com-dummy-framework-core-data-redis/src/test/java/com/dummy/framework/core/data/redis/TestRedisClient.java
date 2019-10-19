@@ -11,9 +11,12 @@ import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
- * @author Vincent Kang
- * @date 19-4-15
- **/
+ * @author Lurker
+ * <p>
+ * 日期： 2019/04/15
+ * 联系方式: hchkang8710@gmail.com
+ * <p/>
+ */
 @Slf4j
 @Rollback
 @EnableAutoConfiguration

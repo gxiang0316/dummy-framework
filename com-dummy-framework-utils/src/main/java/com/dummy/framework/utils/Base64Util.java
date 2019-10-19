@@ -6,9 +6,11 @@ import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
 /**
- * Base64工具
- *
- * @author L.cm
+ * @author Lurker
+ * <p>
+ * 日期： 2019/10/02
+ * 联系方式: hchkang8710@gmail.com
+ * <p/>
  */
 @UtilityClass
 public class Base64Util extends org.springframework.util.Base64Utils {

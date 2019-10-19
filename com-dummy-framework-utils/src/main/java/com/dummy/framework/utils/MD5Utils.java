@@ -5,6 +5,13 @@ import lombok.experimental.UtilityClass;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
+/**
+ * @author Lurker
+ * <p>
+ * 日期： 2019/10/02
+ * 联系方式: hchkang8710@gmail.com
+ * <p/>
+ */
 @UtilityClass
 public class MD5Utils {
 

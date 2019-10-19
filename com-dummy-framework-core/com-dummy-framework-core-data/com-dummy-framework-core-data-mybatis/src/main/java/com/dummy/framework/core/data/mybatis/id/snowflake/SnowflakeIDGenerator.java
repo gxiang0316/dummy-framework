@@ -9,6 +9,13 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Configuration;
 import xyz.downgoon.snowflake.Snowflake;
 
+/**
+ * @author Lurker
+ * <p>
+ * 日期： 2019/03/31
+ * 联系方式: hchkang8710@gmail.com
+ * <p/>
+ */
 @Slf4j
 @Configuration
 @EnableConfigurationProperties({IDGeneratorSwitch.class, SnowflakeIDGeneratorProperties.class})

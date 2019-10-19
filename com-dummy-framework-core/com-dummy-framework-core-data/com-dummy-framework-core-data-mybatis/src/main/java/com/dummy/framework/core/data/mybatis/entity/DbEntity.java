@@ -15,9 +15,12 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
- * @author Vincent Kang
- * @date 19-3-27
- **/
+ * @author Lurker
+ * <p>
+ * 日期： 2019/03/27
+ * 联系方式: hchkang8710@gmail.com
+ * <p/>
+ */
 @Data
 @EqualsAndHashCode(callSuper = true)
 public class DbEntity<PK extends Serializable> extends BaseEntity {

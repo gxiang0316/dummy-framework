@@ -6,6 +6,13 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
+/**
+ * @author Lurker
+ * <p>
+ * 日期： 2019/10/02
+ * 联系方式: hchkang8710@gmail.com
+ * <p/>
+ */
 @Slf4j
 @Component
 public class ApplicationContextProvider implements ApplicationContextAware {

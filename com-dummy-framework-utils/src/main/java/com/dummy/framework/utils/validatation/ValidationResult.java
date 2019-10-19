@@ -8,6 +8,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * @author Lurker
+ * <p>
+ * 日期： 2019/10/02
+ * 联系方式: hchkang8710@gmail.com
+ * <p/>
+ */
 @Getter
 @ToString
 @AllArgsConstructor
