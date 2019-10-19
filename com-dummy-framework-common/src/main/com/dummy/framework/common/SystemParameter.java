@@ -1,7 +1,11 @@
 package com.dummy.framework.common;
 
 /**
- * 系统参数
+ * @author Lurker
+ * <p>
+ * 日期： 2019/08/26
+ * 联系方式: hchkang8710@gmail.com
+ * <p/>
  */
 public interface SystemParameter {
 
