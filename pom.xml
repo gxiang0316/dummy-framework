@@ -3,10 +3,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.dummyframework</groupId>
-    <artifactId>dummy</artifactId>
+    <artifactId>dummy-framework</artifactId>
     <version>1.0.0.RELEASE</version>
     <packaging>pom</packaging>
-    <name>dummy</name>
+    <name>dummy-framework</name>
     <description>傀儡</description>
     <url>https://github.com/kanghouchao/dummy</url>
 
