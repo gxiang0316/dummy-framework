@@ -18,14 +18,10 @@ package com.dummy.framework.mybatisplus.core.hanndlers;
 
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.ibatis.reflection.MetaObject;
 
 /**
- *
- *
  * @author Lurker
  * @since 2020/07/26
  */
@@ -33,5 +29,6 @@ import org.apache.ibatis.reflection.MetaObject;
 @Getter
 @AllArgsConstructor
 public abstract class AbstractEntityHandler implements MetaObjectHandler {
+
 
 }
