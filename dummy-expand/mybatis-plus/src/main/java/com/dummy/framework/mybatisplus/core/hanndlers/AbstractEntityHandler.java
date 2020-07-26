@@ -17,40 +17,21 @@
 package com.dummy.framework.mybatisplus.core.hanndlers;
 
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.reflection.MetaObject;
 
 /**
+ *
+ *
  * @author Lurker
  * @since 2020/07/26
  */
 @Slf4j
-public class BaseEntityHandler implements MetaObjectHandler {
+@Getter
+@AllArgsConstructor
+public abstract class AbstractEntityHandler implements MetaObjectHandler {
 
-    /**
-     * id类型判断符
-     */
-    private final static String ID_TYPE = "java.lang.String";
-
-    private long workerId;
-    private long dataCenterId;
-
-    /**
-     * @param workerId     终端ID
-     * @param dataCenterId 数据中心ID
-     */
-    public BaseEntityHandler(long workerId, long dataCenterId) {
-        super();
-        this.workerId = workerId;
-        this.dataCenterId = dataCenterId;
-    }
-
-    @Override
-    public void insertFill(MetaObject metaObject) {
-    }
-
-    @Override
-    public void updateFill(MetaObject metaObject) {
-
-    }
 }

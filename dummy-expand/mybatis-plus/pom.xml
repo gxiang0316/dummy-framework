@@ -11,15 +11,10 @@
 
     <artifactId>mybatis-plus</artifactId>
 
-    <properties>
-        <mybatis-plus.version>3.3.2</mybatis-plus.version>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus</artifactId>
-            <version>${mybatis-plus.version}</version>
         </dependency>
     </dependencies>
 

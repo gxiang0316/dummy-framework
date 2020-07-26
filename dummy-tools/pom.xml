@@ -8,18 +8,13 @@
         <version>1.0.0.RELEASE</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
+    <version>1.0.0.RELEASE</version>
     <artifactId>dummy-tools</artifactId>
-
-    <properties>
-        <hutool.version>5.3.9</hutool.version>
-    </properties>
 
     <dependencies>
         <dependency>
             <groupId>cn.hutool</groupId>
-            <artifactId>hutool-all</artifactId>
-            <version>${hutool.version}</version>
+            <artifactId>hutool-core</artifactId>
         </dependency>
     </dependencies>
 

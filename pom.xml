@@ -31,9 +31,9 @@
 
     <modules>
         <module>dummy-common</module>
-        <module>dummy-tools</module>
         <module>dummy-expand</module>
         <module>dummy-domain</module>
+        <module>dummy-tools</module>
     </modules>
 
     <properties>
@@ -43,46 +43,54 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <spring.boot.version>2.2.7.RELEASE</spring.boot.version>
-        <spring.cloud.version>Hoxton.SR5</spring.cloud.version>
-        <spring.platform.version>Cairo-SR8</spring.platform.version>
-        <alibaba.cloud.version>2.2.1.RELEASE</alibaba.cloud.version>
+        <spring-framework.version>5.2.6.RELEASE</spring-framework.version>
+        <mybatis-plus.version>3.3.2</mybatis-plus.version>
+        <cn.hutool.version>5.3.9</cn.hutool.version>
+        <hibernate-validator.version>6.0.19.Final</hibernate-validator.version>
+        <servlet-api.version>4.0.1</servlet-api.version>
+        <slf4j.version>1.7.30</slf4j.version>
+        <lombok.version>1.18.12</lombok.version>
 
         <maven-source-plugin.version>2.0.4</maven-source-plugin.version>
         <maven-javadoc-plugin.version>2.3</maven-javadoc-plugin.version>
-
     </properties>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>${spring.boot.version}</version>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-framework-bom</artifactId>
+                <version>${spring-framework.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
             <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring.cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus</artifactId>
+                <version>${mybatis-plus.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.alibaba.cloud</groupId>
-                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-                <version>${alibaba.cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-validator</artifactId>
+                <version>${hibernate-validator.version}</version>
             </dependency>
             <dependency>
-                <groupId>io.spring.platform</groupId>
-                <artifactId>platform-bom</artifactId>
-                <version>${spring.platform.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-core</artifactId>
+                <version>${cn.hutool.version}</version>
             </dependency>
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>${servlet-api.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>com.dummyframework</groupId>
                 <artifactId>dummy-common</artifactId>
@@ -100,12 +108,10 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
             <scope>compile</scope>
         </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-        </dependency>
+
     </dependencies>
 
     <build>
@@ -138,16 +144,4 @@
             </plugin>
         </plugins>
     </build>
-
-    <distributionManagement>
-        <snapshotRepository>
-            <id>dummy-nexus</id>
-            <url>http://127.0.0.1:8081/repository/maven-snapshots/</url>
-        </snapshotRepository>
-        <repository>
-            <id>dummy-nexus</id>
-            <url>http://127.0.0.1:8081/repository/maven-releases/</url>
-        </repository>
-    </distributionManagement>
-
 </project>
