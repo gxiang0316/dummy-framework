@@ -34,6 +34,7 @@
         <module>dummy-expand</module>
         <module>dummy-domain</module>
         <module>dummy-tools</module>
+        <module>dummy-bom</module>
     </modules>
 
     <properties>
