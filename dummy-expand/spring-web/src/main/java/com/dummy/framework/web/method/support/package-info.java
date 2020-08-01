@@ -14,15 +14,10 @@
   limitations under the License.
  */
 
-package com.dummy.framework.common;
-
 /**
- * 基础控制器类
+ * 提供对于http请求头处理的基础类型
  *
  * @author Lurker
- * @since 2020/07/25
+ * @since 2020/08/01
  */
-public interface BaseController {
-
-
-}
+package com.dummy.framework.web.method.support;

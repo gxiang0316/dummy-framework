@@ -26,7 +26,7 @@ import org.springframework.web.method.support.ModelAndViewContainer;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * Get device info from request Head
+ * 对于请求头中的驱动器信息进行转换
  *
  * @author Lurker
  * @since 2020/07/24
@@ -42,8 +42,8 @@ public class DeviceHandlerMethodArgumentResolver implements HandlerMethodArgumen
     public Object resolveArgument(MethodParameter parameter, ModelAndViewContainer mavContainer, NativeWebRequest webRequest, WebDataBinderFactory binderFactory) {
         HttpServletRequest request = webRequest.getNativeRequest(HttpServletRequest.class);
         Assert.notNull(request, "Can't find HttpServletRequest!");
-        final String REQUEST_HEADER_DEVICE_KEY = "x-device-id";
-        String id = request.getHeader(REQUEST_HEADER_DEVICE_KEY);
+        final String requestHeaderDeviceKey = "x-device-id";
+        String id = request.getHeader(requestHeaderDeviceKey);
         if (id != null) {
             DeviceInfo deviceInfo = new DeviceInfo();
             deviceInfo.setId(id);

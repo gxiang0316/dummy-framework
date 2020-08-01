@@ -49,6 +49,7 @@
         <cn.hutool.version>5.3.9</cn.hutool.version>
         <hibernate-validator.version>6.0.19.Final</hibernate-validator.version>
         <servlet-api.version>4.0.1</servlet-api.version>
+        <emoji-java.version>5.1.1</emoji-java.version>
         <slf4j.version>1.7.30</slf4j.version>
         <lombok.version>1.18.12</lombok.version>
 
@@ -84,14 +85,16 @@
                 <groupId>javax.servlet</groupId>
                 <artifactId>javax.servlet-api</artifactId>
                 <version>${servlet-api.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
+                <groupId>com.vdurmont</groupId>
+                <artifactId>emoji-java</artifactId>
+                <version>${emoji-java.version}</version>
+            </dependency>            <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
                 <version>${slf4j.version}</version>
             </dependency>
-
             <dependency>
                 <groupId>com.dummyframework</groupId>
                 <artifactId>dummy-common</artifactId>

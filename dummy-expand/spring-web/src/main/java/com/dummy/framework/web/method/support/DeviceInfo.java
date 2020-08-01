@@ -19,6 +19,8 @@ package com.dummy.framework.web.method.support;
 import lombok.Data;
 
 /**
+ * 启动器信息
+ *
  * @author Lurker
  * @since 2020/07/25
  */

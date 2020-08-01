@@ -16,40 +16,45 @@
 
 package com.dummy.framework.web.servlet.mvc.method.annotation;
 
-import cn.hutool.core.io.IoUtil;
+import com.dummy.framework.utils.EmojiUtil;
+import com.dummy.framework.utils.IoUtil;
 import lombok.Setter;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpInputMessage;
 import org.springframework.http.converter.HttpMessageConverter;
-import org.springframework.web.servlet.mvc.method.annotation.RequestBodyAdvice;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.servlet.mvc.method.annotation.RequestBodyAdviceAdapter;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Type;
+import java.nio.charset.StandardCharsets;
 
 /**
  * @author Lurker
  * @since 2020/07/24
  */
-public class EmojiHandleRequestBodyAdvice implements RequestBodyAdvice {
-
-    @Setter
-    private Boolean allowEmoji = Boolean.FALSE;
+@Slf4j
+@RestControllerAdvice
+public class EmojiHandleRequestBodyAdvice extends RequestBodyAdviceAdapter {
 
     @Override
     public boolean supports(MethodParameter methodParameter, Type targetType, Class<? extends HttpMessageConverter<?>> converterType) {
         EnableEmoji paramType = methodParameter.getParameterAnnotation(EnableEmoji.class);
-        return paramType == null && !allowEmoji;
+        return null == paramType;
     }
 
     @Override
     public HttpInputMessage beforeBodyRead(HttpInputMessage inputMessage, MethodParameter parameter, Type targetType, Class<? extends HttpMessageConverter<?>> converterType) {
+
         return new HttpInputMessage() {
             @Override
             public InputStream getBody() throws IOException {
-                return new ByteArrayInputStream(IoUtil.readBytes(inputMessage.getBody()));
+                String newMessage = EmojiUtil.removeAllEmojis(new String(IoUtil.readBytes(inputMessage.getBody()), StandardCharsets.UTF_8));
+                return new ByteArrayInputStream(newMessage.getBytes(StandardCharsets.UTF_8));
             }
 
             @Override
@@ -57,16 +62,7 @@ public class EmojiHandleRequestBodyAdvice implements RequestBodyAdvice {
                 return inputMessage.getHeaders();
             }
         };
-    }
 
-    @Override
-    public Object afterBodyRead(Object body, HttpInputMessage inputMessage, MethodParameter parameter, Type targetType, Class<? extends HttpMessageConverter<?>> converterType) {
-        return body;
-    }
-
-    @Override
-    public Object handleEmptyBody(Object body, HttpInputMessage inputMessage, MethodParameter parameter, Type targetType, Class<? extends HttpMessageConverter<?>> converterType) {
-        return body;
     }
 
 }
