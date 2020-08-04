@@ -16,10 +16,21 @@
 
 package com.dummy.framework.web.servlet.mvc.method.annotation;
 
+import lombok.Data;
+
 /**
  * @author Lurker
- * @since 2020/07/25
+ * @since 05 8月 2020
  */
-public class DispatchServletHandlerTest {
+@Data
+public class TestObject {
+
+    private Integer id;
+
+    private String name;
+
+    private int age;
+
+    private String remark;
 
 }

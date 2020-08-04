@@ -38,19 +38,18 @@ import java.nio.charset.StandardCharsets;
  * @since 2020/07/24
  */
 @Slf4j
-@RestControllerAdvice
 public class EmojiHandleRequestBodyAdvice extends RequestBodyAdviceAdapter {
 
     @Override
     public boolean supports(MethodParameter methodParameter, Type targetType, Class<? extends HttpMessageConverter<?>> converterType) {
-        EnableEmoji paramType = methodParameter.getParameterAnnotation(EnableEmoji.class);
-        return null == paramType;
+        return null == methodParameter.getParameterAnnotation(EnableEmoji.class);
     }
 
     @Override
     public HttpInputMessage beforeBodyRead(HttpInputMessage inputMessage, MethodParameter parameter, Type targetType, Class<? extends HttpMessageConverter<?>> converterType) {
 
         return new HttpInputMessage() {
+
             @Override
             public InputStream getBody() throws IOException {
                 String newMessage = EmojiUtil.removeAllEmojis(new String(IoUtil.readBytes(inputMessage.getBody()), StandardCharsets.UTF_8));
@@ -61,6 +60,7 @@ public class EmojiHandleRequestBodyAdvice extends RequestBodyAdviceAdapter {
             public HttpHeaders getHeaders() {
                 return inputMessage.getHeaders();
             }
+
         };
 
     }

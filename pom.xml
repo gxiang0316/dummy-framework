@@ -12,8 +12,9 @@
 
     <licenses>
         <license>
-            <name>Apache License</name>
-            <url>http://www.apache.org/licenses/</url>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+            <distribution>repo</distribution>
         </license>
     </licenses>
 
@@ -51,6 +52,7 @@
         <servlet-api.version>4.0.1</servlet-api.version>
         <emoji-java.version>5.1.1</emoji-java.version>
         <slf4j.version>1.7.30</slf4j.version>
+        <junit.version>4.12</junit.version>
         <lombok.version>1.18.12</lombok.version>
 
         <maven-source-plugin.version>2.0.4</maven-source-plugin.version>
@@ -90,9 +92,20 @@
                 <groupId>com.vdurmont</groupId>
                 <artifactId>emoji-java</artifactId>
                 <version>${emoji-java.version}</version>
-            </dependency>            <dependency>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-simple</artifactId>
                 <version>${slf4j.version}</version>
             </dependency>
             <dependency>

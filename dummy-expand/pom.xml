@@ -17,7 +17,30 @@
         <module>spring-webmvc</module>
         <module>spring-web</module>
     </modules>
-
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.dummyframework</groupId>
+                <artifactId>hibernate-validator</artifactId>
+                <version>${project.parent.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.dummyframework</groupId>
+                <artifactId>mybatis-plus</artifactId>
+                <version>${project.parent.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.dummyframework</groupId>
+                <artifactId>spring-web</artifactId>
+                <version>${project.parent.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.dummyframework</groupId>
+                <artifactId>spring-webmvc</artifactId>
+                <version>${project.parent.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
     <dependencies>
         <dependency>
             <groupId>com.dummyframework</groupId>
