@@ -18,6 +18,8 @@ package com.dummy.framework.web.method.support;
 
 import org.springframework.core.MethodParameter;
 import org.springframework.util.Assert;
+import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.support.WebDataBinderFactory;
 import org.springframework.web.context.request.NativeWebRequest;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
@@ -35,7 +37,7 @@ public class DeviceHandlerMethodArgumentResolver implements HandlerMethodArgumen
 
     @Override
     public boolean supportsParameter(MethodParameter parameter) {
-        return true;
+        return parameter.getParameterType().isAssignableFrom(DeviceInfo.class) && parameter.hasParameterAnnotation(RequestHeader.class);
     }
 
     @Override
@@ -44,9 +46,9 @@ public class DeviceHandlerMethodArgumentResolver implements HandlerMethodArgumen
         Assert.notNull(request, "Can't find HttpServletRequest!");
         final String requestHeaderDeviceKey = "x-device-id";
         String id = request.getHeader(requestHeaderDeviceKey);
-        if (id != null) {
+        if (StringUtils.hasText(id)) {
             DeviceInfo deviceInfo = new DeviceInfo();
-            deviceInfo.setId(id);
+            deviceInfo.setId(id.trim());
             return deviceInfo;
         }
         return null;
