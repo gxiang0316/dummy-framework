@@ -16,19 +16,29 @@
 
 package com.dummy.framework.mybatisplus.core.hanndlers;
 
+import cn.hutool.core.lang.Snowflake;
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.ibatis.reflection.MetaObject;
+
+import java.time.LocalDateTime;
 
 /**
  * @author Lurker
  * @since 2020/07/26
  */
 @Slf4j
-@Getter
 @AllArgsConstructor
-public abstract class AbstractEntityHandler implements MetaObjectHandler {
+public class EntityHandler implements MetaObjectHandler {
 
+    @Override
+    public void insertFill(MetaObject metaObject) {
+        strictInsertFill(metaObject, "createTime", LocalDateTime.class, LocalDateTime.now());
+    }
 
+    @Override
+    public void updateFill(MetaObject metaObject) {
+        strictInsertFill(metaObject, "modifyTime", LocalDateTime.class, LocalDateTime.now());
+    }
 }
