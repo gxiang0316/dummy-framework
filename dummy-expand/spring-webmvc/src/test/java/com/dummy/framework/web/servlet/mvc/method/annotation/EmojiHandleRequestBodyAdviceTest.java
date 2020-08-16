@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.dummy.framework.web.servlet.mvc.method.annotation;
+package com.github.kanghouchao.framework.web.servlet.mvc.method.annotation;
 
 import org.junit.Assert;
 import org.junit.Before;

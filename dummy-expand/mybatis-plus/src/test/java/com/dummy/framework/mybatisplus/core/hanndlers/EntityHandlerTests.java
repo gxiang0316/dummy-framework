@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.dummy.framework.mybatisplus.core.hanndlers;
+package com.github.kanghouchao.framework.mybatisplus.core.hanndlers;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.IdType;

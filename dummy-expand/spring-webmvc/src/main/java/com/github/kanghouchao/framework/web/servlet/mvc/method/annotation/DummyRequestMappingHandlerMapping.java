@@ -16,21 +16,21 @@
 
 package com.github.kanghouchao.framework.web.servlet.mvc.method.annotation;
 
-import lombok.Data;
+import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
 
 /**
  * @author Lurker
- * @since 05 8月 2020
+ * @since 2020/07/24
  */
-@Data
-public class TestObject {
+public class DummyRequestMappingHandlerMapping extends RequestMappingHandlerMapping {
 
-    private Integer id;
+    public DummyRequestMappingHandlerMapping() {
 
-    private String name;
+    }
 
-    private int age;
 
-    private String remark;
+    public DummyRequestMappingHandlerMapping(String prefix) {
+
+    }
 
 }

@@ -14,23 +14,10 @@
  * limitations under the License.
  */
 
-package com.github.kanghouchao.framework.web.servlet.mvc.method.annotation;
-
-import lombok.Data;
-
 /**
+ *  扩展mybatis-plus设置默认填充
+ *
  * @author Lurker
- * @since 05 8月 2020
+ * @since 8月 02 2020
  */
-@Data
-public class TestObject {
-
-    private Integer id;
-
-    private String name;
-
-    private int age;
-
-    private String remark;
-
-}
+package com.github.kanghouchao.framework.mybatisplus.core.hanndlers;

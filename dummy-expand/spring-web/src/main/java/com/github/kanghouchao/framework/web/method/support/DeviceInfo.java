@@ -14,23 +14,19 @@
  * limitations under the License.
  */
 
-package com.github.kanghouchao.framework.web.servlet.mvc.method.annotation;
+package com.github.kanghouchao.framework.web.method.support;
 
 import lombok.Data;
 
 /**
+ * 驱动信息
+ *
  * @author Lurker
- * @since 05 8月 2020
+ * @since 2020/07/25
  */
 @Data
-public class TestObject {
+public class DeviceInfo {
 
-    private Integer id;
-
-    private String name;
-
-    private int age;
-
-    private String remark;
+    private String id;
 
 }

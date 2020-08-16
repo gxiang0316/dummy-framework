@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>dummy-framework</artifactId>
-        <groupId>com.dummyframework</groupId>
+        <groupId>com.github.kanghouchao</groupId>
         <version>1.0.0.RELEASE</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -20,22 +20,22 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.dummyframework</groupId>
+                <groupId>com.github.kanghouchao</groupId>
                 <artifactId>hibernate-validator</artifactId>
                 <version>${project.parent.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.dummyframework</groupId>
+                <groupId>com.github.kanghouchao</groupId>
                 <artifactId>mybatis-plus</artifactId>
                 <version>${project.parent.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.dummyframework</groupId>
+                <groupId>com.github.kanghouchao</groupId>
                 <artifactId>spring-web</artifactId>
                 <version>${project.parent.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.dummyframework</groupId>
+                <groupId>com.github.kanghouchao</groupId>
                 <artifactId>spring-webmvc</artifactId>
                 <version>${project.parent.version}</version>
             </dependency>
@@ -43,11 +43,11 @@
     </dependencyManagement>
     <dependencies>
         <dependency>
-            <groupId>com.dummyframework</groupId>
+            <groupId>com.github.kanghouchao</groupId>
             <artifactId>dummy-common</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.dummyframework</groupId>
+            <groupId>com.github.kanghouchao</groupId>
             <artifactId>dummy-tools</artifactId>
         </dependency>
     </dependencies>

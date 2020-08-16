@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.dummy.framework.web.method.support;
+package com.github.kanghouchao.framework.web.method.support;
 
 import org.junit.Assert;
 import org.junit.Before;

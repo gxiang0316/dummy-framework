@@ -14,23 +14,10 @@
  * limitations under the License.
  */
 
-package com.github.kanghouchao.framework.web.servlet.mvc.method.annotation;
-
-import lombok.Data;
-
 /**
+ * 提供类型转换需要的基础类型
+ *
  * @author Lurker
- * @since 05 8月 2020
+ * @since 2020/08/01
  */
-@Data
-public class TestObject {
-
-    private Integer id;
-
-    private String name;
-
-    private int age;
-
-    private String remark;
-
-}
+package com.github.kanghouchao.framework.http.converter;

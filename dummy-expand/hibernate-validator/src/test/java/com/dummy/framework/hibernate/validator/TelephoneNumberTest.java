@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.dummy.framework.hibernate.validator;
+package com.github.kanghouchao.framework.hibernate.validator;
 
 import org.hibernate.validator.HibernateValidator;
 import org.hibernate.validator.HibernateValidatorConfiguration;

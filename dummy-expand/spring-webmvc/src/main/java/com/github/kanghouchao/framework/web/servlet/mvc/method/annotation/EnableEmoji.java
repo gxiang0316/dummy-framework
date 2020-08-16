@@ -16,21 +16,15 @@
 
 package com.github.kanghouchao.framework.web.servlet.mvc.method.annotation;
 
-import lombok.Data;
+import java.lang.annotation.*;
 
 /**
  * @author Lurker
- * @since 05 8月 2020
+ * @since 2020/07/25
  */
-@Data
-public class TestObject {
-
-    private Integer id;
-
-    private String name;
-
-    private int age;
-
-    private String remark;
-
+@Documented
+@Inherited
+@Target(ElementType.PARAMETER)
+@Retention(RetentionPolicy.RUNTIME)
+public @interface EnableEmoji {
 }
