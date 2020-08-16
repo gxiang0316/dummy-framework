@@ -37,7 +37,7 @@ public class DeviceHandlerMethodArgumentResolver implements HandlerMethodArgumen
 
     @Override
     public boolean supportsParameter(MethodParameter parameter) {
-        return parameter.getParameterType().isAssignableFrom(DeviceInfo.class) && parameter.hasParameterAnnotation(RequestHeader.class);
+        return parameter.getParameterType().isAssignableFrom(DeviceInfo.class);
     }
 
     @Override
