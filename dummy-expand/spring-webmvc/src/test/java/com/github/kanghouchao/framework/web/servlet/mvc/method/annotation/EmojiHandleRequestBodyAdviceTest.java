@@ -84,7 +84,6 @@ public class EmojiHandleRequestBodyAdviceTest {
         Assert.assertNotNull(textBuilder.toString());
     }
 
-    @SuppressWarnings("unused")
     @ResponseBody
     public String handle(@EnableEmoji TestObject body) {
         return "";
