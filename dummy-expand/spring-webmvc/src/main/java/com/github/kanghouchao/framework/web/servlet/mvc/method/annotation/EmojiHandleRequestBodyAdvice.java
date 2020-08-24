@@ -16,10 +16,11 @@
 
 package com.github.kanghouchao.framework.web.servlet.mvc.method.annotation;
 
-import com.github.kanghouchao.framework.utils.EmojiUtil;
-import com.github.kanghouchao.framework.utils.IoUtil;
+import com.github.kanghouchao.framework.utils.EmojiUtils;
+import com.github.kanghouchao.framework.utils.IOUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.MethodParameter;
+import org.springframework.core.Ordered;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpInputMessage;
 import org.springframework.http.converter.HttpMessageConverter;
@@ -38,7 +39,7 @@ import java.nio.charset.StandardCharsets;
  */
 @Slf4j
 @ControllerAdvice
-public class EmojiHandleRequestBodyAdvice extends RequestBodyAdviceAdapter {
+public class EmojiHandleRequestBodyAdvice extends RequestBodyAdviceAdapter implements Ordered {
 
     @Override
     public boolean supports(MethodParameter methodParameter, Type targetType, Class<? extends HttpMessageConverter<?>> converterType) {
@@ -52,7 +53,7 @@ public class EmojiHandleRequestBodyAdvice extends RequestBodyAdviceAdapter {
 
             @Override
             public InputStream getBody() throws IOException {
-                String newMessage = EmojiUtil.removeAllEmojis(new String(IoUtil.readBytes(inputMessage.getBody()), StandardCharsets.UTF_8));
+                String newMessage = EmojiUtils.removeAllEmojis(new String(IOUtils.readBytes(inputMessage.getBody()), StandardCharsets.UTF_8));
                 return new ByteArrayInputStream(newMessage.getBytes(StandardCharsets.UTF_8));
             }
 
@@ -65,4 +66,8 @@ public class EmojiHandleRequestBodyAdvice extends RequestBodyAdviceAdapter {
 
     }
 
+    @Override
+    public int getOrder() {
+        return 0;
+    }
 }
