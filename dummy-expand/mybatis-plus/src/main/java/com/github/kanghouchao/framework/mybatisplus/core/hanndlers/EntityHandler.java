@@ -16,7 +16,6 @@
 
 package com.github.kanghouchao.framework.mybatisplus.core.hanndlers;
 
-import cn.hutool.core.lang.Snowflake;
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
