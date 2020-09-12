@@ -14,23 +14,21 @@
  * limitations under the License.
  */
 
-package com.github.kanghouchao.framework.web.servlet.mvc.method.annotation;
+package com.github.kanghouchao.framework.web.method.support;
 
-import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
+import lombok.Data;
+
+import java.io.Serializable;
 
 /**
  * @author Lurker
- * @since 2020/07/24
+ * @since 2020/08/27
  */
-public class DummyRequestMappingHandlerMapping extends RequestMappingHandlerMapping {
+@Data
+public class TokenInfo implements Serializable {
 
-    public DummyRequestMappingHandlerMapping() {
+    private Long userId;
 
-    }
-
-
-    public DummyRequestMappingHandlerMapping(String prefix) {
-
-    }
+    private String username;
 
 }

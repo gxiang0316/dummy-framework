@@ -16,30 +16,35 @@
 
 package com.github.kanghouchao.framework.utils;
 
-import com.sun.istack.internal.NotNull;
-import com.vdurmont.emoji.EmojiParser;
+import cn.hutool.core.util.StrUtil;
+import com.sun.istack.internal.Nullable;
 import lombok.experimental.UtilityClass;
 
 /**
- * 字符串操作工作类，主要用于处理字符串中的表情字符
- *
  * @author Lurker
- * @since 2020/08/24
+ * @since 2020/08/27
  */
 @UtilityClass
-public class EmojiUtils {
-
+public class StringUtils {
 
     /**
-     * 去除字符串中的表情元素
+     * 判断字符串是否为空
      *
      * @param source 原始字符串
-     * @return 没有表情元素的字符串
+     * @return 是否为空值
      */
-    public String removeAllEmojis(@NotNull String source) {
-        if (StringUtils.isBlank(source)) {
-            return source;
-        }
-        return EmojiParser.removeAllEmojis(source);
+    public boolean isBlank(@Nullable CharSequence source) {
+        return StrUtil.isNotBlank(source);
     }
+
+    /**
+     * 判断字符串不为空
+     *
+     * @param source 原始字符串
+     * @return 是否为空
+     */
+    public boolean isNotBlank(@Nullable CharSequence source) {
+        return StrUtil.isNotBlank(source);
+    }
+
 }

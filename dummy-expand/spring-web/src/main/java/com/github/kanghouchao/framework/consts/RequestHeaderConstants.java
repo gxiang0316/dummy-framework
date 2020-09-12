@@ -14,23 +14,19 @@
  * limitations under the License.
  */
 
-package com.github.kanghouchao.framework.web.servlet.mvc.method.annotation;
+package com.github.kanghouchao.framework.consts;
 
-import lombok.Data;
+import lombok.experimental.UtilityClass;
 
 /**
  * @author Lurker
- * @since 05 8月 2020
+ * @since 2020/08/27
  */
-@Data
-public class TestObject {
+@UtilityClass
+public class RequestHeaderConstants {
 
-    private Integer id;
+    public final String REQUEST_HEADER_DEVICE_ID_KEY = "x-device-id";
 
-    private String name;
-
-    private int age;
-
-    private String remark;
+    private final String REQUEST_HEADER_TOKEN_DEFAULT_KEY = "dummy_token";
 
 }

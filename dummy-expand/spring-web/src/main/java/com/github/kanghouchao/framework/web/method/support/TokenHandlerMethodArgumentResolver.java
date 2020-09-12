@@ -16,42 +16,28 @@
 
 package com.github.kanghouchao.framework.web.method.support;
 
-import com.github.kanghouchao.framework.consts.RequestHeaderConstants;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.MethodParameter;
-import org.springframework.util.Assert;
-import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.support.WebDataBinderFactory;
 import org.springframework.web.context.request.NativeWebRequest;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.method.support.ModelAndViewContainer;
 
-import javax.servlet.http.HttpServletRequest;
-
 /**
- * 对于请求头中的驱动器信息进行转换
- *
  * @author Lurker
- * @since 2020/07/24
+ * @since 2020/08/27
  */
-public class DeviceHandlerMethodArgumentResolver implements HandlerMethodArgumentResolver {
+@Slf4j
+public class TokenHandlerMethodArgumentResolver implements HandlerMethodArgumentResolver {
 
     @Override
     public boolean supportsParameter(MethodParameter parameter) {
-        return parameter.getParameterType().isAssignableFrom(DeviceInfo.class);
+        return false;
     }
 
     @Override
-    public Object resolveArgument(MethodParameter parameter, ModelAndViewContainer mavContainer, NativeWebRequest webRequest, WebDataBinderFactory binderFactory) {
-        HttpServletRequest request = webRequest.getNativeRequest(HttpServletRequest.class);
-        Assert.notNull(request, "Can't find HttpServletRequest!");
-        String id = request.getHeader(RequestHeaderConstants.REQUEST_HEADER_DEVICE_ID_KEY);
-        if (StringUtils.hasText(id)) {
-            DeviceInfo deviceInfo = new DeviceInfo();
-            deviceInfo.setId(id.trim());
-            return deviceInfo;
-        }
+    public Object resolveArgument(MethodParameter parameter, ModelAndViewContainer mavContainer, NativeWebRequest webRequest, WebDataBinderFactory binderFactory) throws Exception {
         return null;
     }
-
+    
 }

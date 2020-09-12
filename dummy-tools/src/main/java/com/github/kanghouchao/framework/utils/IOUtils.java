@@ -28,7 +28,12 @@ import java.io.InputStream;
 @UtilityClass
 public class IOUtils {
 
-
+    /**
+     * 读取流
+     *
+     * @param body
+     * @return
+     */
     public byte[] readBytes(InputStream body) {
         return IoUtil.readBytes(body);
     }
